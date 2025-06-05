@@ -1,0 +1,8 @@
+Domain,Problem,Agents,Heuristic_ID,Heuristic_Name,Success,Planning_Time_sec,Evaluation_Time_sec,Communication_Time_sec,Total_Time_sec,Memory_MB,Plan_Length,Messages,Branching_Factor,Discarded_Plans,Notes
+driverlog,Pfile1,2,1,DTG,TRUE,0.088,1.258,3.618,4.992,133,20,2269,4.464,0,Baseline test
+driverlog,Pfile1,2,4,Centroids,TRUE,1.461,0.000,0.000,1.461,131,7,0,0.000,0,Fixed implementation
+driverlog,Pfile1,2,5,MCS,TRUE,1.069,0.000,0.000,1.069,126,7,0,0.000,0,Balanced performance
+ma-blocksworld,Pfile6-2,4,2,DTG+Landmarks,,,,,,,,,,,"4 robot coordination"
+ma-blocksworld,Pfile6-2,4,4,Centroids,,,,,,,,,,,"Complex manipulation"
+elevators,Pfile1,3,1,DTG,,,,,,,,,,,"Elevator scheduling"
+elevators,Pfile1,3,4,Centroids,,,,,,,,,,,"Resource conflicts" 
