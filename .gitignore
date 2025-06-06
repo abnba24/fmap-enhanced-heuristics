@@ -106,6 +106,7 @@ Thumbs.db
 
 # Results and outputs
 results/
+!results/.gitkeep
 plots/
 experiment_results.json
 targeted_experiment_results.json
