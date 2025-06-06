@@ -144,7 +144,7 @@ class SimpleFMAPStats:
         
     def run_fmap_with_stats(self, fmap_args):
         """Run FMAP and collect comprehensive statistics"""
-        print("🚀 Running FMAP with statistics collection...")
+        print("Running FMAP with statistics collection...")
         print(f"Command: java -jar FMAP.jar {' '.join(fmap_args)}")
         
         # Start timing
@@ -247,23 +247,23 @@ class SimpleFMAPStats:
 def print_statistics_report(stats):
     """Print a comprehensive statistics report similar to GUI mode output"""
     print("\n" + "="*70)
-    print("📊 FMAP EXECUTION STATISTICS (GUI-Style Output)")
+    print("FMAP EXECUTION STATISTICS (GUI-Style Output)")
     print("="*70)
     
     if 'error' in stats:
-        print(f"❌ Error: {stats['error']}")
-        print(f"⏱️  Wall clock time: {stats['wall_clock_time_sec']:.3f} sec.")
+        print(f"Error: {stats['error']}")
+        print(f"Wall clock time: {stats['wall_clock_time_sec']:.3f} sec.")
         return
     
     # Solution status
     if stats['solution_found']:
-        print("✅ SOLUTION FOUND")
+        print("SOLUTION FOUND")
     else:
-        print("❌ NO SOLUTION FOUND")
+        print("NO SOLUTION FOUND")
     print()
     
     # Core timing statistics (similar to GUI trace output)
-    print("⏱️  TIMING BREAKDOWN:")
+    print("TIMING BREAKDOWN:")
     print(f"   Planning (expansion) time: {stats['planning_expansion_time_sec']:.3f} sec.")
     print(f"   Evaluation time:          {stats['evaluation_time_sec']:.3f} sec.")
     print(f"   Communication time:       {stats['communication_time_sec']:.3f} sec.")
@@ -273,7 +273,7 @@ def print_statistics_report(stats):
     print()
     
     # Search statistics
-    print("🔍 SEARCH STATISTICS:")
+    print("SEARCH STATISTICS:")
     print(f"   Node expansions:          {stats['node_expansions']}")
     print(f"   Heuristic evaluations:    {stats['heuristic_evaluations']}")
     print(f"   Average branching factor: {stats['estimated_branching_factor']:.3f}")
@@ -281,13 +281,13 @@ def print_statistics_report(stats):
     print()
     
     # Memory statistics
-    print("💾 MEMORY USAGE:")
+    print("MEMORY USAGE:")
     print(f"   Peak memory usage:        {stats['peak_memory_mb']:.0f} MB")
     print()
     
     # Plan quality (if solution found)
     if stats['solution_found']:
-        print("📋 PLAN QUALITY:")
+        print("PLAN QUALITY:")
         print(f"   Plan length:              {stats['plan_length']} actions")
         print(f"   Makespan:                 {stats['makespan']:.1f}")
         print(f"   Parallel actions:         {stats['parallel_actions']}")
@@ -295,7 +295,7 @@ def print_statistics_report(stats):
         print()
     
     # Communication statistics
-    print("📡 COMMUNICATION:")
+    print("COMMUNICATION:")
     print(f"   Number of messages:       {stats['num_messages']}")
     print()
     
@@ -313,7 +313,7 @@ def main():
     
     # Check if FMAP.jar exists
     if not Path('FMAP.jar').exists():
-        print("❌ Error: FMAP.jar not found in current directory")
+        print("Error: FMAP.jar not found in current directory")
         sys.exit(1)
     
     # Run FMAP with statistics collection
@@ -326,7 +326,7 @@ def main():
     # Show verbose output if requested
     if args.verbose and 'stdout' in stats:
         print("\n" + "="*60)
-        print("📝 VERBOSE OUTPUT:")
+        print("VERBOSE OUTPUT:")
         print("="*60)
         print("STDOUT:")
         print(stats['stdout'])
@@ -345,7 +345,7 @@ def main():
             
         with open(args.output, 'w') as f:
             json.dump(json_stats, f, indent=2)
-        print(f"\n💾 Statistics saved to: {args.output}")
+        print(f"\nStatistics saved to: {args.output}")
 
 if __name__ == "__main__":
     main() 
