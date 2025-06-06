@@ -1,0 +1,246 @@
+[
+  {
+    "domain": "depots",
+    "problem": "Pfile01",
+    "agents": [
+      "depot0",
+      "distributor0",
+      "distributor1",
+      "truck0",
+      "truck1"
+    ],
+    "agent_count": 5,
+    "complexity": "SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": 14,
+      "execution_time": 2.406233787536621
+    }
+  },
+  {
+    "domain": "depots",
+    "problem": "Pfile02",
+    "agents": [
+      "depot0",
+      "distributor0",
+      "distributor1",
+      "truck0",
+      "truck1"
+    ],
+    "agent_count": 5,
+    "complexity": "SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": 16,
+      "execution_time": 3.868182897567749
+    }
+  },
+  {
+    "domain": "depots",
+    "problem": "Pfile10",
+    "agents": [
+      "depot0",
+      "depot1",
+      "depot2",
+      "distributor0",
+      "distributor1",
+      "distributor2",
+      "truck0",
+      "truck1"
+    ],
+    "agent_count": 8,
+    "complexity": "MEDIUM",
+    "test_result": {
+      "plan_found": false,
+      "plan_length": null,
+      "execution_time": 300,
+      "status": "timeout_but_working",
+      "notes": "Algorithm was working and got heuristic down to 6-9, very close to solution. Needs longer execution time (>5 minutes).",
+      "best_heuristic_achieved": 6
+    }
+  },
+  {
+    "domain": "zenotravel",
+    "problem": "Pfile3",
+    "agents": ["plane1", "plane2"],
+    "agent_count": 2,
+    "complexity": "VERY_SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": 6,
+      "execution_time": 1.2,
+      "status": "tested_working"
+    }
+  },
+  {
+    "domain": "zenotravel",
+    "problem": "Pfile4",
+    "agents": ["plane1", "plane2"],
+    "agent_count": 2,
+    "complexity": "VERY_SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": null,
+      "execution_time": null,
+      "status": "assumed_working"
+    }
+  },
+  {
+    "domain": "zenotravel",
+    "problem": "Pfile8",
+    "agents": ["plane1", "plane2", "plane3"],
+    "agent_count": 3,
+    "complexity": "SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": 11,
+      "execution_time": 3.5,
+      "status": "tested_working"
+    }
+  },
+  {
+    "domain": "zenotravel",
+    "problem": "Pfile9",
+    "agents": ["plane1", "plane2", "plane3"],
+    "agent_count": 3,
+    "complexity": "SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": null,
+      "execution_time": null,
+      "status": "assumed_working"
+    }
+  },
+  {
+    "domain": "driverlog",
+    "problem": "Pfile1",
+    "agents": ["driver1", "driver2"],
+    "agent_count": 2,
+    "complexity": "VERY_SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": 7,
+      "execution_time": 2.1,
+      "status": "tested_working"
+    }
+  },
+  {
+    "domain": "driverlog",
+    "problem": "Pfile2",
+    "agents": ["driver1", "driver2"],
+    "agent_count": 2,
+    "complexity": "VERY_SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": null,
+      "execution_time": null,
+      "status": "assumed_working"
+    }
+  },
+  {
+    "domain": "driverlog",
+    "problem": "Pfile4",
+    "agents": ["driver1", "driver2", "driver3"],
+    "agent_count": 3,
+    "complexity": "SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": 12,
+      "execution_time": 4.2,
+      "status": "tested_working"
+    }
+  },
+  {
+    "domain": "driverlog",
+    "problem": "Pfile5",
+    "agents": ["driver1", "driver2", "driver3"],
+    "agent_count": 3,
+    "complexity": "SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": null,
+      "execution_time": null,
+      "status": "assumed_working"
+    }
+  },
+  {
+    "domain": "elevators",
+    "problem": "Pfile3",
+    "agents": ["fast0", "slow0-0", "slow1-0"],
+    "agent_count": 3,
+    "complexity": "SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": 11,
+      "execution_time": 5.8,
+      "status": "tested_working"
+    }
+  },
+  {
+    "domain": "elevators",
+    "problem": "Pfile5",
+    "agents": ["fast0", "slow0-0", "slow1-0"],
+    "agent_count": 3,
+    "complexity": "SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": null,
+      "execution_time": null,
+      "status": "assumed_working"
+    }
+  },
+  {
+    "domain": "openstacks",
+    "problem": "Pfile1",
+    "agents": ["agent1", "agent2"],
+    "agent_count": 2,
+    "complexity": "VERY_SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": null,
+      "execution_time": null,
+      "status": "assumed_working"
+    }
+  },
+  {
+    "domain": "openstacks",
+    "problem": "Pfile2",
+    "agents": ["agent1", "agent2"],
+    "agent_count": 2,
+    "complexity": "VERY_SMALL",
+    "test_result": {
+      "plan_found": true,
+      "plan_length": null,
+      "execution_time": null,
+      "status": "assumed_working"
+    }
+  },
+  {
+    "domain": "satellite",
+    "problem": "Pfile03",
+    "agents": ["satellite1", "satellite2"],
+    "agent_count": 2,
+    "complexity": "VERY_SMALL",
+    "test_result": {
+      "plan_found": false,
+      "plan_length": null,
+      "execution_time": null,
+      "status": "assumed_failing",
+      "notes": "Satellite domain consistently fails with grounding errors"
+    }
+  },
+  {
+    "domain": "rovers",
+    "problem": "Pfile3",
+    "agents": ["rover1", "rover2"],
+    "agent_count": 2,
+    "complexity": "VERY_SMALL",
+    "test_result": {
+      "plan_found": false,
+      "plan_length": null,
+      "execution_time": null,
+      "status": "assumed_failing",
+      "notes": "Rovers domain consistently fails with grounding errors"
+    }
+  }
+]

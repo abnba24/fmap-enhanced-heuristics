@@ -1,0 +1,10 @@
+Logapn1 127.0.0.1
+Logapn2 127.0.0.1
+Logtru1 127.0.0.1
+Logtru2 127.0.0.1
+Logtru3 127.0.0.1
+Logtru4 127.0.0.1
+Logtru5 127.0.0.1
+Logtru6 127.0.0.1
+Logtru7 127.0.0.1
+Logtru8 127.0.0.1

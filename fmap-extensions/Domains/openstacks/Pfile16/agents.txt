@@ -1,0 +1,2 @@
+Manager 127.0.0.1
+Manufacturer 127.0.0.1
