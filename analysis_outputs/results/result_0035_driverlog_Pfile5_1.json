@@ -1,0 +1,169 @@
+{
+  "config": {
+    "domain": "driverlog",
+    "problem": "Pfile5",
+    "heuristic": 1,
+    "agents": [
+      "driver1",
+      "driver2",
+      "driver3"
+    ],
+    "agent_files": [
+      [
+        "../Domains/driverlog/Pfile5/DomainDriverlog.pddl",
+        "../Domains/driverlog/Pfile5/ProblemDriverlogdriver1.pddl"
+      ],
+      [
+        "../Domains/driverlog/Pfile5/DomainDriverlog.pddl",
+        "../Domains/driverlog/Pfile5/ProblemDriverlogdriver2.pddl"
+      ],
+      [
+        "../Domains/driverlog/Pfile5/DomainDriverlog.pddl",
+        "../Domains/driverlog/Pfile5/ProblemDriverlogdriver3.pddl"
+      ]
+    ],
+    "timeout_seconds": 1800,
+    "memory_limit_mb": 8192
+  },
+  "search": {
+    "coverage": true,
+    "wall_clock_time": 1.0443439483642578,
+    "cpu_time": 16.722094624,
+    "peak_memory_mb": 155.03125,
+    "search_nodes": 24,
+    "dtg_heuristic_values": [
+      0,
+      16,
+      14,
+      14,
+      13,
+      14,
+      13,
+      12,
+      11,
+      12,
+      13,
+      12,
+      11,
+      10,
+      10,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "landmark_heuristic_values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "plan": {
+    "plan_found": true,
+    "plan_length": 18,
+    "makespan": 15.0,
+    "actions": [
+      [
+        0.0,
+        "(Board-Truck driver1 truck2 s1)"
+      ],
+      [
+        1.0,
+        "(Drive-Truck truck2 s1 s2 driver1)"
+      ],
+      [
+        0.0,
+        "(Walk driver2 s0 p0-1)"
+      ],
+      [
+        1.0,
+        "(Walk driver2 p0-1 s1)"
+      ],
+      [
+        2.0,
+        "(Board-Truck driver2 truck1 s1)"
+      ],
+      [
+        3.0,
+        "(Drive-Truck truck1 s1 s2 driver2)"
+      ],
+      [
+        4.0,
+        "(Load-Truck package3 truck1 s2)"
+      ],
+      [
+        5.0,
+        "(Load-Truck package4 truck1 s2)"
+      ],
+      [
+        6.0,
+        "(Drive-Truck truck1 s2 s0 driver2)"
+      ],
+      [
+        7.0,
+        "(Unload-Truck package4 truck1 s0)"
+      ],
+      [
+        8.0,
+        "(Load-Truck package1 truck1 s0)"
+      ],
+      [
+        9.0,
+        "(Load-Truck package2 truck1 s0)"
+      ],
+      [
+        10.0,
+        "(Drive-Truck truck1 s0 s1 driver2)"
+      ],
+      [
+        11.0,
+        "(Unload-Truck package1 truck1 s1)"
+      ],
+      [
+        12.0,
+        "(Unload-Truck package2 truck1 s1)"
+      ],
+      [
+        13.0,
+        "(Unload-Truck package3 truck1 s1)"
+      ],
+      [
+        14.0,
+        "(Drive-Truck truck1 s1 s2 driver2)"
+      ],
+      [
+        15.0,
+        "(Disembark-Truck driver2 truck1 s2)"
+      ]
+    ]
+  },
+  "error_message": null,
+  "stdout_log": "; Hdtg = 0, Hlan = 0\n; Hdtg = 16, Hlan = 0\n; Hdtg = 14, Hlan = 0\n; Hdtg = 14, Hlan = 0\n; Hdtg = 13, Hlan = 0\n; Hdtg = 14, Hlan = 0\n; Hdtg = 13, Hlan = 0\n; Hdtg = 12, Hlan = 0\n; Hdtg = 11, Hlan = 0\n; Hdtg = 12, Hlan = 0\n; Hdtg = 13, Hlan = 0\n; Hdtg = 12, Hlan = 0\n; Hdtg = 11, Hlan = 0\n; Hdtg = 10, Hlan = 0\n; Hdtg = 10, Hlan = 0\n; Hdtg = 8, Hlan = 0\n; Hdtg = 7, Hlan = 0\n; Hdtg = 6, Hlan = 0\n; Hdtg = 5, Hlan = 0\n; Hdtg = 4, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 2, Hlan = 0\n; Hdtg = 1, Hlan = 0\n; Hdtg = 0, Hlan = 0\n\n; Solution plan - CoDMAP Distributed format\n; -----------------------------------------\n0: (Board-Truck driver1 truck2 s1)\n1: (Drive-Truck truck2 s1 s2 driver1)\n0: (Walk driver2 s0 p0-1)\n1: (Walk driver2 p0-1 s1)\n2: (Board-Truck driver2 truck1 s1)\n3: (Drive-Truck truck1 s1 s2 driver2)\n4: (Load-Truck package3 truck1 s2)\n5: (Load-Truck package4 truck1 s2)\n6: (Drive-Truck truck1 s2 s0 driver2)\n7: (Unload-Truck package4 truck1 s0)\n8: (Load-Truck package1 truck1 s0)\n9: (Load-Truck package2 truck1 s0)\n10: (Drive-Truck truck1 s0 s1 driver2)\n11: (Unload-Truck package1 truck1 s1)\n12: (Unload-Truck package2 truck1 s1)\n13: (Unload-Truck package3 truck1 s1)\n14: (Drive-Truck truck1 s1 s2 driver2)\n15: (Disembark-Truck driver2 truck1 s2)\n; Stopping...\n",
+  "stderr_log": ""
+}

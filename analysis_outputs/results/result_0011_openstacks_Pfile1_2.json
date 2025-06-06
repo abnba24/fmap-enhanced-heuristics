@@ -1,0 +1,41 @@
+{
+  "config": {
+    "domain": "openstacks",
+    "problem": "Pfile1",
+    "heuristic": 2,
+    "agents": [
+      "Manager",
+      "Manufacturer"
+    ],
+    "agent_files": [
+      [
+        "../Domains/openstacks/Pfile1/DomainOpenstacksManager.pddl",
+        "../Domains/openstacks/Pfile1/ProblemOpenstacksManager.pddl"
+      ],
+      [
+        "../Domains/openstacks/Pfile1/DomainOpenstacksManager.pddl",
+        "../Domains/openstacks/Pfile1/ProblemOpenstacksManufacturer.pddl"
+      ]
+    ],
+    "timeout_seconds": 1800,
+    "memory_limit_mb": 8192
+  },
+  "search": {
+    "coverage": true,
+    "wall_clock_time": 0.21237707138061523,
+    "cpu_time": 0.151790409,
+    "peak_memory_mb": 49.890625,
+    "search_nodes": 0,
+    "dtg_heuristic_values": null,
+    "landmark_heuristic_values": null
+  },
+  "plan": {
+    "plan_found": false,
+    "plan_length": 0,
+    "makespan": 0.0,
+    "actions": null
+  },
+  "error_message": null,
+  "stdout_log": "java.lang.AssertionError: Goal not achieved: shipped o1 true\njava.lang.AssertionError: Goal not achieved: shipped o1 true\n\tat org.agreement_technologies.service.map_landmarks.MALandmarkGraph.<init>(MALandmarkGraph.java:119)\n\tat org.agreement_technologies.service.map_landmarks.LandmarksImp.<init>(LandmarksImp.java:56)\n\tat org.agreement_technologies.service.map_heuristic.LandmarksHeuristic.initializeLandmarks(LandmarksHeuristic.java:144)\n\tat org.agreement_technologies.service.map_heuristic.LandmarksHeuristic.<init>(LandmarksHeuristic.java:133)\n\tat org.agreement_technologies.service.map_heuristic.HeuristicFactoryImp.getHeuristic(HeuristicFactoryImp.java:59)\n\tat org.agreement_technologies.agents.PlanningAlgorithm.planningStage(PlanningAlgorithm.java:277)\n\tat org.agreement_technologies.agents.PlanningAlgorithm.executeWithSynchronousStart(PlanningAlgorithm.java:370)\n\tat org.agreement_technologies.agents.PlanningAlgorithm.execute(PlanningAlgorithm.java:194)\n\tat org.agreement_technologies.agents.PlanningAgent.run(PlanningAgent.java:70)\n\njava.lang.AssertionError: Goal not achieved: shipped o1 true\njava.lang.AssertionError: Goal not achieved: shipped o1 true\n\tat org.agreement_technologies.service.map_landmarks.MALandmarkGraph.<init>(MALandmarkGraph.java:119)\n\tat org.agreement_technologies.service.map_landmarks.LandmarksImp.<init>(LandmarksImp.java:56)\n\tat org.agreement_technologies.service.map_heuristic.LandmarksHeuristic.initializeLandmarks(LandmarksHeuristic.java:144)\n\tat org.agreement_technologies.service.map_heuristic.LandmarksHeuristic.<init>(LandmarksHeuristic.java:133)\n\tat org.agreement_technologies.service.map_heuristic.HeuristicFactoryImp.getHeuristic(HeuristicFactoryImp.java:59)\n\tat org.agreement_technologies.agents.PlanningAlgorithm.planningStage(PlanningAlgorithm.java:277)\n\tat org.agreement_technologies.agents.PlanningAlgorithm.executeWithSynchronousStart(PlanningAlgorithm.java:370)\n\tat org.agreement_technologies.agents.PlanningAlgorithm.execute(PlanningAlgorithm.java:194)\n\tat org.agreement_technologies.agents.PlanningAgent.run(PlanningAgent.java:70)\n\n; Stopping...\n",
+  "stderr_log": ""
+}

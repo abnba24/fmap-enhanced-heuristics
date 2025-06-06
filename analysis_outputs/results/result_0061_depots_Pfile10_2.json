@@ -1,0 +1,184 @@
+{
+  "config": {
+    "domain": "depots",
+    "problem": "Pfile10",
+    "heuristic": 2,
+    "agents": [
+      "distributor0",
+      "depot0",
+      "depot1",
+      "distributor1",
+      "distributor2",
+      "depot2",
+      "truck1",
+      "truck0"
+    ],
+    "agent_files": [
+      [
+        "../Domains/depots/Pfile10/DomainDepotsDepot.pddl",
+        "../Domains/depots/Pfile10/ProblemDepotsdistributor0.pddl"
+      ],
+      [
+        "../Domains/depots/Pfile10/DomainDepotsDepot.pddl",
+        "../Domains/depots/Pfile10/ProblemDepotsdepot0.pddl"
+      ],
+      [
+        "../Domains/depots/Pfile10/DomainDepotsDepot.pddl",
+        "../Domains/depots/Pfile10/ProblemDepotsdepot1.pddl"
+      ],
+      [
+        "../Domains/depots/Pfile10/DomainDepotsDepot.pddl",
+        "../Domains/depots/Pfile10/ProblemDepotsdistributor1.pddl"
+      ],
+      [
+        "../Domains/depots/Pfile10/DomainDepotsDepot.pddl",
+        "../Domains/depots/Pfile10/ProblemDepotsdistributor2.pddl"
+      ],
+      [
+        "../Domains/depots/Pfile10/DomainDepotsDepot.pddl",
+        "../Domains/depots/Pfile10/ProblemDepotsdepot2.pddl"
+      ],
+      [
+        "../Domains/depots/Pfile10/DomainDepotsTruck.pddl",
+        "../Domains/depots/Pfile10/ProblemDepotstruck1.pddl"
+      ],
+      [
+        "../Domains/depots/Pfile10/DomainDepotsTruck.pddl",
+        "../Domains/depots/Pfile10/ProblemDepotstruck0.pddl"
+      ]
+    ],
+    "timeout_seconds": 1800,
+    "memory_limit_mb": 8192
+  },
+  "search": {
+    "coverage": true,
+    "wall_clock_time": 43.49195909500122,
+    "cpu_time": 22760.250297177,
+    "peak_memory_mb": 312.46875,
+    "search_nodes": 339,
+    "dtg_heuristic_values": null,
+    "landmark_heuristic_values": null
+  },
+  "plan": {
+    "plan_found": true,
+    "plan_length": 28,
+    "makespan": 19.0,
+    "actions": [
+      [
+        0.0,
+        "(LiftP hoist0 crate1 pallet0 depot0)"
+      ],
+      [
+        8.0,
+        "(DropP hoist0 crate3 pallet0 depot0)"
+      ],
+      [
+        0.0,
+        "(LiftP hoist1 crate0 pallet1 depot1)"
+      ],
+      [
+        0.0,
+        "(LiftP hoist2 crate4 pallet2 depot2)"
+      ],
+      [
+        0.0,
+        "(LiftP hoist3 crate5 pallet3 distributor0)"
+      ],
+      [
+        11.0,
+        "(DropP hoist3 crate2 pallet3 distributor0)"
+      ],
+      [
+        0.0,
+        "(LiftC hoist5 crate3 crate2 distributor2)"
+      ],
+      [
+        4.0,
+        "(LiftP hoist5 crate2 pallet5 distributor2)"
+      ],
+      [
+        17.0,
+        "(DropP hoist5 crate4 pallet5 distributor2)"
+      ],
+      [
+        19.0,
+        "(DropC hoist5 crate0 crate4 distributor2)"
+      ],
+      [
+        0.0,
+        "(Drive truck0 depot1 depot0)"
+      ],
+      [
+        1.0,
+        "(Load hoist0 crate1 truck0 depot0)"
+      ],
+      [
+        1.0,
+        "(Load hoist2 crate4 truck1 depot2)"
+      ],
+      [
+        2.0,
+        "(Drive truck1 depot2 distributor2)"
+      ],
+      [
+        3.0,
+        "(Load hoist5 crate3 truck1 distributor2)"
+      ],
+      [
+        5.0,
+        "(Load hoist5 crate2 truck1 distributor2)"
+      ],
+      [
+        6.0,
+        "(Drive truck1 distributor2 depot0)"
+      ],
+      [
+        7.0,
+        "(Unload hoist0 crate3 truck1 depot0)"
+      ],
+      [
+        8.0,
+        "(Drive truck1 depot0 distributor0)"
+      ],
+      [
+        9.0,
+        "(Load hoist3 crate5 truck1 distributor0)"
+      ],
+      [
+        10.0,
+        "(Unload hoist3 crate2 truck1 distributor0)"
+      ],
+      [
+        11.0,
+        "(Drive truck1 distributor0 depot1)"
+      ],
+      [
+        12.0,
+        "(Load hoist1 crate0 truck1 depot1)"
+      ],
+      [
+        13.0,
+        "(Unload hoist1 crate5 truck1 depot1)"
+      ],
+      [
+        14.0,
+        "(Drive truck1 depot1 depot0)"
+      ],
+      [
+        15.0,
+        "(Drive truck1 depot0 distributor2)"
+      ],
+      [
+        16.0,
+        "(Unload hoist5 crate4 truck1 distributor2)"
+      ],
+      [
+        18.0,
+        "(Unload hoist5 crate0 truck1 distributor2)"
+      ]
+    ]
+  },
+  "error_message": null,
+  "stdout_log": "; Hdtg = 0, Hlan = 0\n; Hdtg = 34, Hlan = 21\n; Hdtg = 65, Hlan = 17\n; Hdtg = 24, Hlan = 17\n; Hdtg = 58, Hlan = 14\n; Hdtg = 21, Hlan = 14\n; Hdtg = 56, Hlan = 12\n; Hdtg = 20, Hlan = 14\n; Hdtg = 50, Hlan = 10\n; Hdtg = 20, Hlan = 14\n; Hdtg = 59, Hlan = 9\n; Hdtg = 20, Hlan = 14\n; Hdtg = 57, Hlan = 11\n; Hdtg = 19, Hlan = 11\n; Hdtg = 53, Hlan = 12\n; Hdtg = 18, Hlan = 11\n; Hdtg = 48, Hlan = 9\n; Hdtg = 17, Hlan = 11\n; Hdtg = 47, Hlan = 10\n; Hdtg = 17, Hlan = 11\n; Hdtg = 56, Hlan = 9\n; Hdtg = 17, Hlan = 11\n; Hdtg = 18, Hlan = 10\n; Hdtg = 17, Hlan = 11\n; Hdtg = 54, Hlan = 11\n; Hdtg = 15, Hlan = 11\n; Hdtg = 30, Hlan = 9\n; Hdtg = 14, Hlan = 10\n; Hdtg = 19, Hlan = 7\n; Hdtg = 12, Hlan = 7\n; Hdtg = 11, Hlan = 6\n; Hdtg = 12, Hlan = 7\n; Hdtg = 20, Hlan = 5\n; Hdtg = 11, Hlan = 6\n; Hdtg = 16, Hlan = 5\n; Hdtg = 8, Hlan = 4\n; Hdtg = 14, Hlan = 3\n; Hdtg = 9, Hlan = 5\n; Hdtg = 14, Hlan = 8\n; Hdtg = 9, Hlan = 5\n; Hdtg = 19, Hlan = 9\n; Hdtg = 9, Hlan = 5\n; Hdtg = 44, Hlan = 12\n; Hdtg = 8, Hlan = 5\n; Hdtg = 6, Hlan = 4\n; Hdtg = 7, Hlan = 4\n; Hdtg = 11, Hlan = 3\n; Hdtg = 6, Hlan = 4\n; Hdtg = 9, Hlan = 2\n; Hdtg = 4, Hlan = 3\n; Hdtg = 8, Hlan = 1\n; Hdtg = 6, Hlan = 4\n; Hdtg = 8, Hlan = 2\n; Hdtg = 7, Hlan = 4\n; Hdtg = 7, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 1\n; Hdtg = 7, Hlan = 4\n; Hdtg = 8, Hlan = 3\n; Hdtg = 7, Hlan = 4\n; Hdtg = 9, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 9, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 9, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 54, Hlan = 11\n; Hdtg = 6, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 1\n; Hdtg = 5, Hlan = 3\n; Hdtg = 45, Hlan = 12\n; Hdtg = 8, Hlan = 5\n; Hdtg = 21, Hlan = 11\n; Hdtg = 8, Hlan = 5\n; Hdtg = 74, Hlan = 10\n; Hdtg = 7, Hlan = 4\n; Hdtg = 52, Hlan = 12\n; Hdtg = 7, Hlan = 4\n; Hdtg = 48, Hlan = 12\n; Hdtg = 6, Hlan = 3\n; Hdtg = 53, Hlan = 12\n; Hdtg = 6, Hlan = 3\n; Hdtg = 21, Hlan = 11\n; Hdtg = 6, Hlan = 3\n; Hdtg = 53, Hlan = 12\n; Hdtg = 6, Hlan = 3\n; Hdtg = 45, Hlan = 12\n; Hdtg = 6, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 1\n; Hdtg = 5, Hlan = 3\n; Hdtg = 45, Hlan = 12\n; Hdtg = 7, Hlan = 4\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 4\n; Hdtg = 8, Hlan = 2\n; Hdtg = 6, Hlan = 4\n; Hdtg = 7, Hlan = 1\n; Hdtg = 6, Hlan = 3\n; Hdtg = 8, Hlan = 2\n; Hdtg = 7, Hlan = 3\n; Hdtg = 8, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 9, Hlan = 5\n; Hdtg = 53, Hlan = 13\n; Hdtg = 7, Hlan = 4\n; Hdtg = 52, Hlan = 13\n; Hdtg = 6, Hlan = 3\n; Hdtg = 53, Hlan = 13\n; Hdtg = 6, Hlan = 3\n; Hdtg = 19, Hlan = 12\n; Hdtg = 6, Hlan = 3\n; Hdtg = 53, Hlan = 13\n; Hdtg = 7, Hlan = 4\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 8, Hlan = 2\n; Hdtg = 6, Hlan = 3\n; Hdtg = 21, Hlan = 13\n; Hdtg = 7, Hlan = 4\n; Hdtg = 21, Hlan = 13\n; Hdtg = 7, Hlan = 4\n; Hdtg = 56, Hlan = 13\n; Hdtg = 7, Hlan = 4\n; Hdtg = 57, Hlan = 14\n; Hdtg = 7, Hlan = 4\n; Hdtg = 84, Hlan = 15\n; Hdtg = 7, Hlan = 4\n; Hdtg = 79, Hlan = 13\n; Hdtg = 7, Hlan = 4\n; Hdtg = 86, Hlan = 12\n; Hdtg = 6, Hlan = 3\n; Hdtg = 84, Hlan = 14\n; Hdtg = 6, Hlan = 3\n; Hdtg = 85, Hlan = 15\n; Hdtg = 6, Hlan = 3\n; Hdtg = 77, Hlan = 15\n; Hdtg = 6, Hlan = 3\n; Hdtg = 78, Hlan = 15\n; Hdtg = 7, Hlan = 3\n; Hdtg = 88, Hlan = 14\n; Hdtg = 7, Hlan = 3\n; Hdtg = 86, Hlan = 16\n; Hdtg = 6, Hlan = 3\n; Hdtg = 84, Hlan = 16\n; Hdtg = 5, Hlan = 3\n; Hdtg = 60, Hlan = 18\n; Hdtg = 5, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 77, Hlan = 19\n; Hdtg = 5, Hlan = 3\n; Hdtg = 78, Hlan = 17\n; Hdtg = 5, Hlan = 3\n; Hdtg = 86, Hlan = 16\n; Hdtg = 5, Hlan = 3\n; Hdtg = 79, Hlan = 19\n; Hdtg = 7, Hlan = 3\n; Hdtg = 87, Hlan = 20\n; Hdtg = 7, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 1\n; Hdtg = 5, Hlan = 3\n; Hdtg = 3, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 1\n; Hdtg = 4, Hlan = 2\n; Hdtg = 7, Hlan = 1\n; Hdtg = 5, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 1\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 4\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 8, Hlan = 2\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 1\n; Hdtg = 7, Hlan = 3\n; Hdtg = 10, Hlan = 6\n; Hdtg = 10, Hlan = 6\n; Hdtg = 7, Hlan = 3\n; Hdtg = 10, Hlan = 6\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 10, Hlan = 1\n; Hdtg = 4, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 1\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 3, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 1\n; Hdtg = 3, Hlan = 2\n; Hdtg = 6, Hlan = 1\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 4\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 4\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 9, Hlan = 5\n; Hdtg = 9, Hlan = 5\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 9, Hlan = 5\n; Hdtg = 5, Hlan = 1\n; Hdtg = 9, Hlan = 5\n; Hdtg = 9, Hlan = 5\n; Hdtg = 7, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 3, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 1\n; Hdtg = 4, Hlan = 2\n; Hdtg = 7, Hlan = 1\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 1\n; Hdtg = 7, Hlan = 3\n; Hdtg = 4, Hlan = 3\n; Hdtg = 4, Hlan = 3\n; Hdtg = 4, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 4, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 4, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 4, Hlan = 3\n; Hdtg = 5, Hlan = 3\n; Hdtg = 4, Hlan = 3\n; Hdtg = 8, Hlan = 4\n; Hdtg = 6, Hlan = 3\n; Hdtg = 8, Hlan = 4\n; Hdtg = 8, Hlan = 4\n; Hdtg = 7, Hlan = 4\n; Hdtg = 6, Hlan = 4\n; Hdtg = 6, Hlan = 4\n; Hdtg = 6, Hlan = 4\n; Hdtg = 6, Hlan = 4\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 2\n; Hdtg = 8, Hlan = 4\n; Hdtg = 5, Hlan = 1\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 2\n; Hdtg = 6, Hlan = 3\n; Hdtg = 8, Hlan = 2\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 2\n; Hdtg = 8, Hlan = 4\n; Hdtg = 12, Hlan = 1\n; Hdtg = 1, Hlan = 1\n; Hdtg = 0, Hlan = 0\n\n; Solution plan - CoDMAP Distributed format\n; -----------------------------------------\n0: (LiftP hoist0 crate1 pallet0 depot0)\n8: (DropP hoist0 crate3 pallet0 depot0)\n0: (LiftP hoist1 crate0 pallet1 depot1)\n0: (LiftP hoist2 crate4 pallet2 depot2)\n0: (LiftP hoist3 crate5 pallet3 distributor0)\n11: (DropP hoist3 crate2 pallet3 distributor0)\n0: (LiftC hoist5 crate3 crate2 distributor2)\n4: (LiftP hoist5 crate2 pallet5 distributor2)\n17: (DropP hoist5 crate4 pallet5 distributor2)\n19: (DropC hoist5 crate0 crate4 distributor2)\n0: (Drive truck0 depot1 depot0)\n1: (Load hoist0 crate1 truck0 depot0)\n1: (Load hoist2 crate4 truck1 depot2)\n2: (Drive truck1 depot2 distributor2)\n3: (Load hoist5 crate3 truck1 distributor2)\n5: (Load hoist5 crate2 truck1 distributor2)\n6: (Drive truck1 distributor2 depot0)\n7: (Unload hoist0 crate3 truck1 depot0)\n8: (Drive truck1 depot0 distributor0)\n9: (Load hoist3 crate5 truck1 distributor0)\n10: (Unload hoist3 crate2 truck1 distributor0)\n11: (Drive truck1 distributor0 depot1)\n12: (Load hoist1 crate0 truck1 depot1)\n13: (Unload hoist1 crate5 truck1 depot1)\n14: (Drive truck1 depot1 depot0)\n15: (Drive truck1 depot0 distributor2)\n16: (Unload hoist5 crate4 truck1 distributor2)\n18: (Unload hoist5 crate0 truck1 distributor2)\n; Stopping...\n",
+  "stderr_log": ""
+}

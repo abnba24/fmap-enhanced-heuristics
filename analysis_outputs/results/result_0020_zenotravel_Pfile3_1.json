@@ -1,0 +1,84 @@
+{
+  "config": {
+    "domain": "zenotravel",
+    "problem": "Pfile3",
+    "heuristic": 1,
+    "agents": [
+      "plane1",
+      "plane2"
+    ],
+    "agent_files": [
+      [
+        "../Domains/zenotravel/Pfile3/DomainZenotravel.pddl",
+        "../Domains/zenotravel/Pfile3/ProblemZenotravelplane1.pddl"
+      ],
+      [
+        "../Domains/zenotravel/Pfile3/DomainZenotravel.pddl",
+        "../Domains/zenotravel/Pfile3/ProblemZenotravelplane2.pddl"
+      ]
+    ],
+    "timeout_seconds": 1800,
+    "memory_limit_mb": 8192
+  },
+  "search": {
+    "coverage": true,
+    "wall_clock_time": 0.3513200283050537,
+    "cpu_time": 1.1640269289999998,
+    "peak_memory_mb": 79.78125,
+    "search_nodes": 8,
+    "dtg_heuristic_values": [
+      0,
+      4,
+      4,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "landmark_heuristic_values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "plan": {
+    "plan_found": true,
+    "plan_length": 6,
+    "makespan": 5.0,
+    "actions": [
+      [
+        0.0,
+        "(board person1 plane1 city0)"
+      ],
+      [
+        1.0,
+        "(fly plane1 city0 city1 fl4 fl3)"
+      ],
+      [
+        2.0,
+        "(debark person1 plane1 city1)"
+      ],
+      [
+        3.0,
+        "(board person3 plane1 city1)"
+      ],
+      [
+        4.0,
+        "(fly plane1 city1 city0 fl3 fl2)"
+      ],
+      [
+        5.0,
+        "(debark person3 plane1 city0)"
+      ]
+    ]
+  },
+  "error_message": null,
+  "stdout_log": "; Hdtg = 0, Hlan = 0\n; Hdtg = 4, Hlan = 0\n; Hdtg = 4, Hlan = 0\n; Hdtg = 4, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 2, Hlan = 0\n; Hdtg = 1, Hlan = 0\n; Hdtg = 0, Hlan = 0\n\n; Solution plan - CoDMAP Distributed format\n; -----------------------------------------\n0: (board person1 plane1 city0)\n1: (fly plane1 city0 city1 fl4 fl3)\n2: (debark person1 plane1 city1)\n3: (board person3 plane1 city1)\n4: (fly plane1 city1 city0 fl3 fl2)\n5: (debark person3 plane1 city0)\n; Stopping...\n",
+  "stderr_log": ""
+}

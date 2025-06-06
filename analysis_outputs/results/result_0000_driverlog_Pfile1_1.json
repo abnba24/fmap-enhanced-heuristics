@@ -1,0 +1,70 @@
+{
+  "config": {
+    "domain": "driverlog",
+    "problem": "Pfile1",
+    "heuristic": 1,
+    "agents": [
+      "driver2",
+      "driver1"
+    ],
+    "agent_files": [
+      [
+        "../Domains/driverlog/Pfile1/DomainDriverlog.pddl",
+        "../Domains/driverlog/Pfile1/ProblemDriverlogdriver2.pddl"
+      ],
+      [
+        "../Domains/driverlog/Pfile1/DomainDriverlog.pddl",
+        "../Domains/driverlog/Pfile1/ProblemDriverlogdriver1.pddl"
+      ]
+    ],
+    "timeout_seconds": 1800,
+    "memory_limit_mb": 8192
+  },
+  "search": {
+    "coverage": true,
+    "wall_clock_time": 0.5583608150482178,
+    "cpu_time": 2.120959605,
+    "peak_memory_mb": 81.578125,
+    "search_nodes": 19,
+    "dtg_heuristic_values": null,
+    "landmark_heuristic_values": null
+  },
+  "plan": {
+    "plan_found": true,
+    "plan_length": 7,
+    "makespan": 6.0,
+    "actions": [
+      [
+        0.0,
+        "(Walk driver1 s2 p1-2)"
+      ],
+      [
+        1.0,
+        "(Walk driver1 p1-2 s1)"
+      ],
+      [
+        2.0,
+        "(Walk driver1 s1 p1-0)"
+      ],
+      [
+        3.0,
+        "(Walk driver1 p1-0 s0)"
+      ],
+      [
+        4.0,
+        "(Board-Truck driver1 truck1 s0)"
+      ],
+      [
+        5.0,
+        "(Drive-Truck truck1 s0 s1 driver1)"
+      ],
+      [
+        6.0,
+        "(Disembark-Truck driver1 truck1 s1)"
+      ]
+    ]
+  },
+  "error_message": null,
+  "stdout_log": "; Hdtg = 0, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 2, Hlan = 0\n; Hdtg = 5, Hlan = 0\n; Hdtg = 4, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 2, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 4, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 2, Hlan = 0\n; Hdtg = 1, Hlan = 0\n; Hdtg = 0, Hlan = 0\n\n; Solution plan - CoDMAP Distributed format\n; -----------------------------------------\n0: (Walk driver1 s2 p1-2)\n1: (Walk driver1 p1-2 s1)\n2: (Walk driver1 s1 p1-0)\n3: (Walk driver1 p1-0 s0)\n4: (Board-Truck driver1 truck1 s0)\n5: (Drive-Truck truck1 s0 s1 driver1)\n6: (Disembark-Truck driver1 truck1 s1)\n; Stopping...\n",
+  "stderr_log": ""
+}

@@ -1,0 +1,10 @@
+UNIVERSAL FMAP HEURISTIC ANALYSIS SUMMARY\n==================================================\n\nOVERALL STATISTICS\n--------------------\nTotal experiments: 63\nSuccessful experiments: 53 (84.1%)\nDomains tested: 5\nProblems tested: 8\nHeuristics tested: 5\nAgent count range: 2 - 8\n\nPERFORMANCE BY HEURISTIC\n-------------------------\n                  wall_clock_time                           ... peak_memory_mb          plan_length       
+                            count     mean      std    min  ...           mean      std        mean    std
+heuristic_name                                              ...                                           
+Centroids                       6   55.935  115.216  0.196  ...        197.031  156.683       6.667  6.976
+DTG                            13   11.880   38.071  0.224  ...        166.308  166.099      11.846  8.726
+DTG+Landmarks                  13    4.889   11.684  0.191  ...        144.700   73.519      14.077  9.215
+Inc_DTG+Landmarks              13    4.927   11.787  0.200  ...        144.369   74.729      14.077  9.215
+MCS                             8  382.556  630.697  0.189  ...        597.438  794.507       7.500  7.672
+
+[5 rows x 9 columns]\n\nBEST PERFORMING HEURISTIC: DTG+Landmarks\nAverage execution time: 4.889 seconds\n\n

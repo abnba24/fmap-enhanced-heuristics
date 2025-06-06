@@ -1,0 +1,183 @@
+{
+  "config": {
+    "domain": "zenotravel",
+    "problem": "Pfile8",
+    "heuristic": 2,
+    "agents": [
+      "plane1",
+      "plane2",
+      "plane3"
+    ],
+    "agent_files": [
+      [
+        "../Domains/zenotravel/Pfile8/DomainZenotravel.pddl",
+        "../Domains/zenotravel/Pfile8/ProblemZenotravelplane1.pddl"
+      ],
+      [
+        "../Domains/zenotravel/Pfile8/DomainZenotravel.pddl",
+        "../Domains/zenotravel/Pfile8/ProblemZenotravelplane2.pddl"
+      ],
+      [
+        "../Domains/zenotravel/Pfile8/DomainZenotravel.pddl",
+        "../Domains/zenotravel/Pfile8/ProblemZenotravelplane3.pddl"
+      ]
+    ],
+    "timeout_seconds": 1800,
+    "memory_limit_mb": 8192
+  },
+  "search": {
+    "coverage": true,
+    "wall_clock_time": 2.073110580444336,
+    "cpu_time": 64.121852256,
+    "peak_memory_mb": 186.4375,
+    "search_nodes": 43,
+    "dtg_heuristic_values": [
+      0,
+      10,
+      10,
+      10,
+      10,
+      9,
+      10,
+      10,
+      9,
+      9,
+      10,
+      10,
+      10,
+      9,
+      10,
+      8,
+      9,
+      8,
+      9,
+      7,
+      9,
+      8,
+      8,
+      7,
+      7,
+      6,
+      7,
+      6,
+      6,
+      5,
+      7,
+      6,
+      6,
+      5,
+      6,
+      4,
+      5,
+      3,
+      4,
+      2,
+      2,
+      1,
+      0
+    ],
+    "landmark_heuristic_values": [
+      0,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      4,
+      3,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      1,
+      2,
+      1,
+      1,
+      0
+    ]
+  },
+  "plan": {
+    "plan_found": true,
+    "plan_length": 12,
+    "makespan": 10.0,
+    "actions": [
+      [
+        0.0,
+        "(fly plane1 city0 city3 fl6 fl5)"
+      ],
+      [
+        0.0,
+        "(fly plane3 city0 city4 fl3 fl2)"
+      ],
+      [
+        1.0,
+        "(board person6 plane3 city4)"
+      ],
+      [
+        2.0,
+        "(fly plane3 city4 city2 fl2 fl1)"
+      ],
+      [
+        3.0,
+        "(board person3 plane3 city2)"
+      ],
+      [
+        4.0,
+        "(debark person6 plane3 city2)"
+      ],
+      [
+        5.0,
+        "(fly plane3 city2 city1 fl1 fl0)"
+      ],
+      [
+        6.0,
+        "(board person1 plane3 city1)"
+      ],
+      [
+        7.0,
+        "(refuel plane3 city1 fl0 fl1)"
+      ],
+      [
+        8.0,
+        "(debark person3 plane3 city1)"
+      ],
+      [
+        9.0,
+        "(fly plane3 city1 city0 fl1 fl0)"
+      ],
+      [
+        10.0,
+        "(debark person1 plane3 city0)"
+      ]
+    ]
+  },
+  "error_message": null,
+  "stdout_log": "; Hdtg = 0, Hlan = 0\n; Hdtg = 10, Hlan = 4\n; Hdtg = 10, Hlan = 3\n; Hdtg = 10, Hlan = 4\n; Hdtg = 10, Hlan = 3\n; Hdtg = 9, Hlan = 4\n; Hdtg = 10, Hlan = 3\n; Hdtg = 10, Hlan = 4\n; Hdtg = 9, Hlan = 3\n; Hdtg = 9, Hlan = 4\n; Hdtg = 10, Hlan = 3\n; Hdtg = 10, Hlan = 4\n; Hdtg = 10, Hlan = 3\n; Hdtg = 9, Hlan = 4\n; Hdtg = 10, Hlan = 3\n; Hdtg = 8, Hlan = 4\n; Hdtg = 9, Hlan = 3\n; Hdtg = 8, Hlan = 4\n; Hdtg = 9, Hlan = 3\n; Hdtg = 7, Hlan = 4\n; Hdtg = 9, Hlan = 3\n; Hdtg = 8, Hlan = 4\n; Hdtg = 8, Hlan = 3\n; Hdtg = 7, Hlan = 4\n; Hdtg = 7, Hlan = 3\n; Hdtg = 6, Hlan = 3\n; Hdtg = 7, Hlan = 2\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 7, Hlan = 2\n; Hdtg = 6, Hlan = 3\n; Hdtg = 6, Hlan = 2\n; Hdtg = 5, Hlan = 3\n; Hdtg = 6, Hlan = 2\n; Hdtg = 4, Hlan = 3\n; Hdtg = 5, Hlan = 2\n; Hdtg = 3, Hlan = 2\n; Hdtg = 4, Hlan = 1\n; Hdtg = 2, Hlan = 2\n; Hdtg = 2, Hlan = 1\n; Hdtg = 1, Hlan = 1\n; Hdtg = 0, Hlan = 0\n\n; Solution plan - CoDMAP Distributed format\n; -----------------------------------------\n0: (fly plane1 city0 city3 fl6 fl5)\n0: (fly plane3 city0 city4 fl3 fl2)\n1: (board person6 plane3 city4)\n2: (fly plane3 city4 city2 fl2 fl1)\n3: (board person3 plane3 city2)\n4: (debark person6 plane3 city2)\n5: (fly plane3 city2 city1 fl1 fl0)\n6: (board person1 plane3 city1)\n7: (refuel plane3 city1 fl0 fl1)\n8: (debark person3 plane3 city1)\n9: (fly plane3 city1 city0 fl1 fl0)\n10: (debark person1 plane3 city0)\n; Stopping...\n",
+  "stderr_log": ""
+}

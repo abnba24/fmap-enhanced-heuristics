@@ -1,0 +1,45 @@
+{
+  "config": {
+    "domain": "openstacks",
+    "problem": "Pfile2",
+    "heuristic": 1,
+    "agents": [
+      "Manager",
+      "Manufacturer"
+    ],
+    "agent_files": [
+      [
+        "../Domains/openstacks/Pfile2/DomainOpenstacksManager.pddl",
+        "../Domains/openstacks/Pfile2/ProblemOpenstacksManager.pddl"
+      ],
+      [
+        "../Domains/openstacks/Pfile2/DomainOpenstacksManager.pddl",
+        "../Domains/openstacks/Pfile2/ProblemOpenstacksManufacturer.pddl"
+      ]
+    ],
+    "timeout_seconds": 1800,
+    "memory_limit_mb": 8192
+  },
+  "search": {
+    "coverage": true,
+    "wall_clock_time": 0.2269759178161621,
+    "cpu_time": 0.5077143239999999,
+    "peak_memory_mb": 60.15625,
+    "search_nodes": 1,
+    "dtg_heuristic_values": [
+      0
+    ],
+    "landmark_heuristic_values": [
+      0
+    ]
+  },
+  "plan": {
+    "plan_found": false,
+    "plan_length": 0,
+    "makespan": 0.0,
+    "actions": null
+  },
+  "error_message": null,
+  "stdout_log": "; Hdtg = 0, Hlan = 0\n\n; Solution plan - CoDMAP Distributed format\n; -----------------------------------------\njava.lang.NullPointerException: Cannot invoke \"org.agreement_technologies.common.map_planner.Plan.printPlan(int, String, java.util.ArrayList)\" because \"solution\" is null\njava.lang.NullPointerException: Cannot invoke \"org.agreement_technologies.common.map_planner.Plan.printPlan(int, String, java.util.ArrayList)\" because \"solution\" is null\n\tat org.agreement_technologies.service.map_planner.Planner.computePlan(Planner.java:394)\n\tat org.agreement_technologies.agents.PlanningAlgorithm.planningStage(PlanningAlgorithm.java:282)\n\tat org.agreement_technologies.agents.PlanningAlgorithm.executeWithSynchronousStart(PlanningAlgorithm.java:370)\n\tat org.agreement_technologies.agents.PlanningAlgorithm.execute(PlanningAlgorithm.java:194)\n\tat org.agreement_technologies.agents.PlanningAgent.run(PlanningAgent.java:70)\n\n; Stopping...\n",
+  "stderr_log": ""
+}

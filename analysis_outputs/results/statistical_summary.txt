@@ -1,0 +1,52 @@
+FMAP HEURISTIC PERFORMANCE ANALYSIS - STATISTICAL SUMMARY
+======================================================================
+
+OVERALL EXPERIMENT STATISTICS
+------------------------------
+Total successful experiments: 53
+Domains tested: 5
+Heuristics tested: 5
+Agent count range: 2 - 8
+Problems tested: 8
+
+PERFORMANCE BY HEURISTIC
+-------------------------
+                  wall_clock_time                           ... peak_memory_mb          plan_length       
+                            count     mean      std    min  ...           mean      std        mean    std
+heuristic_name                                              ...                                           
+Centroids                       6   55.935  115.216  0.196  ...        197.031  156.683       6.667  6.976
+DTG                            13   11.880   38.071  0.224  ...        166.308  166.099      11.846  8.726
+DTG+Landmarks                  13    4.889   11.684  0.191  ...        144.700   73.519      14.077  9.215
+Inc_DTG+Landmarks              13    4.927   11.787  0.200  ...        144.369   74.729      14.077  9.215
+MCS                             8  382.556  630.697  0.189  ...        597.438  794.507       7.500  7.672
+
+[5 rows x 9 columns]
+
+DOMAIN ANALYSIS
+---------------
+           wall_clock_time                   agent_count           
+                     count     mean      std         min max   mean
+domain                                                             
+depots                   3   75.298   54.767           8   8  8.000
+driverlog               16   35.916   93.983           2   3  2.375
+elevators                7  196.004  510.866           3   3  3.000
+openstacks              10    0.203    0.014           2   2  2.000
+zenotravel              17   88.441  346.375           2   3  2.412
+
+BEST PERFORMING HEURISTIC: DTG+LANDMARKS
+----------------------------------------
+Experiments: 13
+Average execution time: 4.889 seconds
+Std deviation: 11.684 seconds
+Average plan length: 14.077
+Average memory usage: 144.7 MB
+Domains covered: 5
+Agent count range: 2 - 8
+
+HEURISTIC PERFORMANCE RANKING
+------------------------------
+1. DTG+Landmarks: 4.889s (n=13.0)
+2. Inc_DTG+Landmarks: 4.927s (n=13.0)
+3. DTG: 11.880s (n=13.0)
+4. Centroids: 55.935s (n=6.0)
+5. MCS: 382.556s (n=8.0)

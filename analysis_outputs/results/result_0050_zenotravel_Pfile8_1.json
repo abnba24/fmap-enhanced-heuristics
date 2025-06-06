@@ -1,0 +1,167 @@
+{
+  "config": {
+    "domain": "zenotravel",
+    "problem": "Pfile8",
+    "heuristic": 1,
+    "agents": [
+      "plane1",
+      "plane2",
+      "plane3"
+    ],
+    "agent_files": [
+      [
+        "../Domains/zenotravel/Pfile8/DomainZenotravel.pddl",
+        "../Domains/zenotravel/Pfile8/ProblemZenotravelplane1.pddl"
+      ],
+      [
+        "../Domains/zenotravel/Pfile8/DomainZenotravel.pddl",
+        "../Domains/zenotravel/Pfile8/ProblemZenotravelplane2.pddl"
+      ],
+      [
+        "../Domains/zenotravel/Pfile8/DomainZenotravel.pddl",
+        "../Domains/zenotravel/Pfile8/ProblemZenotravelplane3.pddl"
+      ]
+    ],
+    "timeout_seconds": 1800,
+    "memory_limit_mb": 8192
+  },
+  "search": {
+    "coverage": true,
+    "wall_clock_time": 1.79457688331604,
+    "cpu_time": 39.615080497,
+    "peak_memory_mb": 168.671875,
+    "search_nodes": 31,
+    "dtg_heuristic_values": [
+      0,
+      10,
+      10,
+      9,
+      10,
+      9,
+      10,
+      9,
+      8,
+      9,
+      8,
+      9,
+      9,
+      8,
+      9,
+      8,
+      7,
+      8,
+      8,
+      7,
+      6,
+      7,
+      6,
+      5,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "landmark_heuristic_values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "plan": {
+    "plan_found": true,
+    "plan_length": 14,
+    "makespan": 12.0,
+    "actions": [
+      [
+        0.0,
+        "(fly plane1 city0 city3 fl6 fl5)"
+      ],
+      [
+        0.0,
+        "(fly plane3 city0 city1 fl3 fl2)"
+      ],
+      [
+        1.0,
+        "(board person1 plane3 city1)"
+      ],
+      [
+        2.0,
+        "(fly plane3 city1 city4 fl2 fl1)"
+      ],
+      [
+        3.0,
+        "(board person6 plane3 city4)"
+      ],
+      [
+        4.0,
+        "(fly plane3 city4 city0 fl1 fl0)"
+      ],
+      [
+        5.0,
+        "(refuel plane3 city0 fl0 fl1)"
+      ],
+      [
+        6.0,
+        "(debark person1 plane3 city0)"
+      ],
+      [
+        7.0,
+        "(fly plane3 city0 city2 fl1 fl0)"
+      ],
+      [
+        8.0,
+        "(board person3 plane3 city2)"
+      ],
+      [
+        9.0,
+        "(refuel plane3 city2 fl0 fl1)"
+      ],
+      [
+        10.0,
+        "(debark person6 plane3 city2)"
+      ],
+      [
+        11.0,
+        "(fly plane3 city2 city1 fl1 fl0)"
+      ],
+      [
+        12.0,
+        "(debark person3 plane3 city1)"
+      ]
+    ]
+  },
+  "error_message": null,
+  "stdout_log": "; Hdtg = 0, Hlan = 0\n; Hdtg = 10, Hlan = 0\n; Hdtg = 10, Hlan = 0\n; Hdtg = 9, Hlan = 0\n; Hdtg = 10, Hlan = 0\n; Hdtg = 9, Hlan = 0\n; Hdtg = 10, Hlan = 0\n; Hdtg = 9, Hlan = 0\n; Hdtg = 8, Hlan = 0\n; Hdtg = 9, Hlan = 0\n; Hdtg = 8, Hlan = 0\n; Hdtg = 9, Hlan = 0\n; Hdtg = 9, Hlan = 0\n; Hdtg = 8, Hlan = 0\n; Hdtg = 9, Hlan = 0\n; Hdtg = 8, Hlan = 0\n; Hdtg = 7, Hlan = 0\n; Hdtg = 8, Hlan = 0\n; Hdtg = 8, Hlan = 0\n; Hdtg = 7, Hlan = 0\n; Hdtg = 6, Hlan = 0\n; Hdtg = 7, Hlan = 0\n; Hdtg = 6, Hlan = 0\n; Hdtg = 5, Hlan = 0\n; Hdtg = 6, Hlan = 0\n; Hdtg = 5, Hlan = 0\n; Hdtg = 4, Hlan = 0\n; Hdtg = 3, Hlan = 0\n; Hdtg = 2, Hlan = 0\n; Hdtg = 1, Hlan = 0\n; Hdtg = 0, Hlan = 0\n\n; Solution plan - CoDMAP Distributed format\n; -----------------------------------------\n0: (fly plane1 city0 city3 fl6 fl5)\n0: (fly plane3 city0 city1 fl3 fl2)\n1: (board person1 plane3 city1)\n2: (fly plane3 city1 city4 fl2 fl1)\n3: (board person6 plane3 city4)\n4: (fly plane3 city4 city0 fl1 fl0)\n5: (refuel plane3 city0 fl0 fl1)\n6: (debark person1 plane3 city0)\n7: (fly plane3 city0 city2 fl1 fl0)\n8: (board person3 plane3 city2)\n9: (refuel plane3 city2 fl0 fl1)\n10: (debark person6 plane3 city2)\n11: (fly plane3 city2 city1 fl1 fl0)\n12: (debark person3 plane3 city1)\n; Stopping...\n",
+  "stderr_log": ""
+}
