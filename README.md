@@ -21,11 +21,11 @@ This repository contains an extended version of the FMAP (Factored Multi-Agent P
 
 | Rank | Heuristic | Success Rate | Avg Time | Memory Usage | Plan Quality |
 |------|-----------|--------------|----------|--------------|--------------|
-| 🥇 1 | **DTG+Landmarks** | 84.6% | 4.89s | 144.7 MB | 14.1 actions |
-| 🥈 2 | **Inc_DTG+Landmarks** | 84.6% | 4.93s | 144.4 MB | 14.1 actions |
-| 🥉 3 | **DTG_Only** | 84.6% | 11.88s | 166.3 MB | 11.8 actions |
-| 4 | **Inc_DTG_Only** | 84.6% | 5.79s | 161.4 MB | 16.6 actions |
-| 5 | **FF_Heuristic** | 38.5% | 325.6s | 523.5 MB | 12.0 actions |
+| 🥇 1 | **DTG+Landmarks** | 100.0% | 4.89s | 144.7 MB | 14.1 actions |
+| 🥈 2 | **Inc_DTG+Landmarks** | 100.0% | 4.93s | 144.4 MB | 14.1 actions |
+| 🥉 3 | **DTG** | 100.0% | 11.88s | 166.3 MB | 11.8 actions |
+| 4 | **MCS** | 61.5% | 382.6s | 597.4 MB | 7.5 actions |
+| 5 | **Centroids** | 46.2% | 55.9s | 197.0 MB | 6.7 actions |
 
 ### 🌍 Domain-Specific Performance
 
@@ -35,10 +35,10 @@ This repository contains an extended version of the FMAP (Factored Multi-Agent P
 
 ### 💡 Key Insights
 
-1. **DTG+Landmarks** provides the best balance of speed, memory efficiency, and success rate
-2. **Landmark-based heuristics** significantly outperform FF heuristic in distributed settings
-3. **Success rates** are more critical than speed for practical applications
-4. **Domain characteristics** heavily influence heuristic effectiveness
+1. **DTG+Landmarks** provides the optimal balance of speed, memory efficiency, and success rate
+2. **Incremental DTG with landmarks** offers competitive performance with minimal overhead
+3. **DTG-based heuristics** consistently achieve 100% success rates across tested domains
+4. **MCS and Centroids** struggle with complex multi-agent coordination, showing lower success rates
 
 ## 🚀 Quick Start
 
@@ -96,11 +96,11 @@ fmap-extensions/
 
 ### Available Heuristics
 
-1. **DTG (Domain Transition Graph)**: Basic DTG-based heuristic
-2. **DTG+Landmarks**: DTG combined with landmark detection
-3. **Inc_DTG+Landmarks**: Incremental DTG with landmarks
-4. **Inc_DTG_Only**: Incremental DTG without landmarks
-5. **FF_Heuristic**: Fast-Forward heuristic adapted for multi-agent
+1. **DTG (Domain Transition Graph)**: Basic DTG-based heuristic for multi-agent planning
+2. **DTG+Landmarks**: DTG combined with landmark detection for enhanced guidance  
+3. **Inc_DTG+Landmarks**: Incremental DTG with landmark detection for efficiency
+4. **Centroids**: Centroid-based heuristic for distributed coordination
+5. **MCS (Minimum Covering States)**: State coverage heuristic for comprehensive exploration
 
 ### Evaluation Metrics
 
@@ -162,17 +162,17 @@ python3 generate_detailed_summary.py
 
 - **Total Experiments**: 65 across 5 domains
 - **Successful Runs**: 53 (81.5% overall success rate)
-- **Best Performing**: DTG+Landmarks (4.89s average execution time)
-- **Most Efficient**: Inc_DTG+Landmarks (similar performance, slightly higher time)
-- **Most Challenging**: FF_Heuristic and MCS (low success rates)
+- **Best Performing**: DTG+Landmarks (4.89s average, 100% success rate)
+- **Most Efficient**: Inc_DTG+Landmarks (4.93s average, 100% success rate)
+- **Most Challenging**: Centroids (46.2% success) and MCS (61.5% success)
 
 ### Performance Insights
 
-1. **Landmark-based approaches** consistently outperform others
-2. **DTG variants** provide reliable performance across domains
-3. **Incremental approaches** offer competitive performance
-4. **Domain characteristics** significantly impact heuristic effectiveness
-5. **Agent count scaling** affects different heuristics differently
+1. **DTG+Landmarks** achieves optimal performance with fastest execution and 100% success
+2. **Inc_DTG+Landmarks** provides competitive alternative with minimal performance difference
+3. **DTG-based approaches** demonstrate superior reliability across all tested domains
+4. **MCS** shows better success rate (61.5%) than Centroids (46.2%) but with high execution times
+5. **Centroids** require significant optimization for practical multi-agent applications
 
 ## 🔧 Installation & Setup
 
