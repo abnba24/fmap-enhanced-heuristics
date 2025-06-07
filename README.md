@@ -96,11 +96,15 @@ fmap-extensions/
 
 ### Available Heuristics
 
-1. **DTG (Domain Transition Graph)**: Basic DTG-based heuristic for multi-agent planning
-2. **DTG+Landmarks**: DTG combined with landmark detection for enhanced guidance  
-3. **Inc_DTG+Landmarks**: Incremental DTG with landmark detection for efficiency
-4. **Centroids**: Centroid-based heuristic for distributed coordination
-5. **MCS (Minimum Covering States)**: State coverage heuristic for comprehensive exploration
+| ID | Heuristic | Description |
+|----|-----------|-------------|
+| 1  | **DTG** | Domain Transition Graph - Basic DTG-based heuristic for multi-agent planning |
+| 2  | **DTG+Landmarks** | DTG combined with landmark detection for enhanced guidance |
+| 3  | **Inc_DTG+Landmarks** | Incremental DTG with landmark detection for efficiency |
+| 4  | **Centroids** | Centroid-based heuristic for distributed coordination |
+| 5  | **MCS** | Minimum Covering States - State coverage heuristic for comprehensive exploration |
+
+> **Note**: Heuristic IDs correspond to the Java implementation in `HeuristicFactory.java`. The mapping is consistent across all analysis scripts.
 
 ### Evaluation Metrics
 
