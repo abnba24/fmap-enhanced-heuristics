@@ -35,10 +35,11 @@ This repository contains an extended version of the FMAP (Factored Multi-Agent P
 
 ### Key Insights
 
-1. **DTG+Landmarks** provides the optimal balance of speed, memory efficiency, and success rate
-2. **Incremental DTG with landmarks** offers competitive performance with minimal overhead
+1. **DTG+Landmarks** provides the optimal balance of speed, memory efficiency, and success rate (100%)
+2. **Incremental DTG with landmarks** offers competitive performance with minimal overhead (100% success)
 3. **DTG-based heuristics** consistently achieve 100% success rates across tested domains
-4. **MCS and Centroids** struggle with complex multi-agent coordination, showing lower success rates
+4. **MCS** achieves moderate success (61.5%) but with high computational cost
+5. **Centroids** shows lower success rates (46.2%) and requires optimisation for practical use
 
 ## Quick Start
 
