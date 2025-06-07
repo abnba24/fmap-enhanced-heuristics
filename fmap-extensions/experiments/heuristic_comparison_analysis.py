@@ -30,13 +30,13 @@ class HeuristicComparisonAnalyzer:
         self.plots_dir = Path(plots_dir)
         self.plots_dir.mkdir(parents=True, exist_ok=True)
         
-        # Heuristic name mapping
+        # Heuristic name mapping (corrected to match Java source)
         self.heuristic_names = {
-            1: "DTG_Only",
-            2: "DTG+Landmarks", 
-            3: "Inc_DTG_Only",
-            4: "Inc_DTG+Landmarks",
-            5: "FF_Heuristic"
+            1: "DTG",
+            2: "DTG+Landmarks",
+            3: "Inc_DTG+Landmarks",
+            4: "Centroids",
+            5: "MCS"
         }
         
         self.df = None

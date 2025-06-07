@@ -1,6 +1,10 @@
+# For experiment analysis dependencies, use the main requirements.txt in the project root:
+# pip install -r ../../requirements.txt
+
+# Core analysis dependencies (minimal set for experiments only)
 numpy>=1.21.0
 pandas>=1.3.0
 matplotlib>=3.5.0
 seaborn>=0.11.0
 scipy>=1.7.0
-psutil>=5.8.0 
+psutil>=5.8.0

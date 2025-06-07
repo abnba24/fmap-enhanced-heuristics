@@ -28,13 +28,13 @@ def load_and_analyze_results():
             search = data.get('search', {})
             plan = data.get('plan', {})
             
-            # Map heuristic IDs to names
+            # Map heuristic IDs to names (corrected to match Java source)
             heuristic_names = {
-                1: "DTG_Only",
-                2: "DTG+Landmarks", 
-                3: "Inc_DTG_Only",
-                4: "Inc_DTG+Landmarks",
-                5: "FF_Heuristic"
+                1: "DTG",
+                2: "DTG+Landmarks",
+                3: "Inc_DTG+Landmarks",
+                4: "Centroids",
+                5: "MCS"
             }
             
             result = {
