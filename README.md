@@ -65,8 +65,22 @@ python3 heuristic_comparison_analysis.py
 ### Sample FMAP Execution
 
 ```bash
-# Run FMAP with DTG+Landmarks heuristic
+# Run FMAP with DTG+Landmarks heuristic (baseline)
 java -jar FMAP.jar -h 2 agent1 domain1.pddl problem1.pddl agent-list.txt
+
+# Run with Centroids heuristic (minimises mean cost to goals)
+java -jar FMAP.jar driver1 Domains/driverlog/Pfile1/DomainDriverlog.pddl \
+  Domains/driverlog/Pfile1/ProblemDriverlogdriver1.pddl \
+  driver2 Domains/driverlog/Pfile1/DomainDriverlog.pddl \
+  Domains/driverlog/Pfile1/ProblemDriverlogdriver2.pddl \
+  Domains/driverlog/Pfile1/agents.txt -h 4
+
+# Run with MCS heuristic (minimises max cost to goals)
+java -jar FMAP.jar driver1 Domains/driverlog/Pfile1/DomainDriverlog.pddl \
+  Domains/driverlog/Pfile1/ProblemDriverlogdriver1.pddl \
+  driver2 Domains/driverlog/Pfile1/DomainDriverlog.pddl \
+  Domains/driverlog/Pfile1/ProblemDriverlogdriver2.pddl \
+  Domains/driverlog/Pfile1/agents.txt -h 5
 ```
 
 ## Project Structure
@@ -77,10 +91,14 @@ fmap-extensions/
 │   ├── experiment_runner.py      # Main experiment framework
 │   ├── heuristic_comparison_analysis.py  # Custom analysis tools
 │   ├── results/
-│   │   ├── plots/                # Generated visualizations
+│   │   ├── plots/                # Generated visualisations
 │   │   ├── *.json               # Individual experiment results
 │   │   └── statistical_summary.txt
 │   └── analysis_env/            # Python virtual environment
+├── tools/                       # Utility and maintenance tools
+│   ├── rebuild_correct_analysis.py  # Analysis rebuild tool
+│   ├── fix_plots_and_tables.py     # Plot and table fixing tool
+│   └── verify_cleanup.py           # Verification script
 ├── Domains/                     # Planning domains and problems
 │   ├── driverlog/
 │   ├── elevators/
@@ -96,15 +114,27 @@ fmap-extensions/
 
 ### Available Heuristics
 
-| ID | Heuristic | Description |
-|----|-----------|-------------|
-| 1  | **DTG** | Domain Transition Graph - Basic DTG-based heuristic for multi-agent planning |
-| 2  | **DTG+Landmarks** | DTG combined with landmark detection for enhanced guidance |
-| 3  | **Inc_DTG+Landmarks** | Incremental DTG with landmark detection for efficiency |
-| 4  | **Centroids** | Centroid-based heuristic for distributed coordination |
-| 5  | **MCS** | Minimum Covering States - State coverage heuristic for comprehensive exploration |
+| ID | Heuristic | Mathematical Formula | Description | Optimisation Target |
+|----|-----------|---------------------|-------------|-------------------|
+| 1  | **DTG** | Standard DTG computation | Domain Transition Graph - Basic DTG-based heuristic for multi-agent planning | Baseline performance |
+| 2  | **DTG+Landmarks** | DTG + landmark detection | DTG combined with landmark detection for enhanced guidance | Enhanced guidance |
+| 3  | **Inc_DTG+Landmarks** | Incremental DTG + landmarks | Incremental DTG with landmark detection for efficiency | Computational efficiency |
+| 4  | **Centroids** | `μ{ĥ(s, Gi)}` | Minimises mean cost to goals across all goal subsets | Expected performance |
+| 5  | **MCS** | `max{ĥ(s, Gi)}` | Minimises maximum cost to goals (Minimum Covering States) | Worst-case robustness |
 
 > **Note**: Heuristic IDs correspond to the Java implementation in `HeuristicFactory.java`. The mapping is consistent across all analysis scripts.
+
+#### Mathematical Foundations
+
+**Centroids Heuristic (ID=4)**:
+- **Formula**: `h_centroids(s) = μ{ĥ(s, Gi)}` where `μ` represents the mean
+- **Purpose**: Minimises the expected cost to reach goals by averaging heuristic values across all goal subsets
+- **Application**: Balanced approach for multi-goal planning scenarios with expected performance optimisation
+
+**MCS Heuristic (ID=5)**:
+- **Formula**: `h_mcs(s) = max{ĥ(s, Gi)}`
+- **Purpose**: Minimises the worst-case cost by taking the maximum heuristic value across goal subsets
+- **Application**: Robust planning with worst-case performance guarantees
 
 ### Evaluation Metrics
 
@@ -221,9 +251,9 @@ This analysis framework is suitable for:
 
 ### Core Documentation
 
-- **Original FMAP Manual**: See `README_GITHUB.md` for original FMAP documentation
 - **Javadoc**: Complete API documentation in `javadoc/` directory
 - **Analysis Reports**: Generated reports in `fmap-extensions/experiments/results/plots/`
+- **Tool Documentation**: Utility scripts in `fmap-extensions/tools/` directory
 
 ### Research Papers & References
 
