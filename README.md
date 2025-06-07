@@ -4,43 +4,43 @@ A comprehensive experimental evaluation and analysis of distributed multi-agent 
 
 ![Heuristic Performance](fmap-extensions/experiments/results/plots/heuristic_comparison_analysis.png)
 
-## 🔬 Project Overview
+## Project Overview
 
 This repository contains an extended version of the FMAP (Factored Multi-Agent Planning) platform with comprehensive experimental analysis comparing different heuristic functions for distributed multi-agent planning. The project evaluates heuristic performance across multiple domains, agent configurations, and problem complexities.
 
-### 🎯 Research Focus
+### Research Focus
 
 - **Heuristic Comparison**: Systematic evaluation of 5 different heuristics
 - **Performance Analysis**: Execution time, memory usage, plan quality, and success rates
 - **Scalability Study**: Performance across different agent counts and problem complexities
 - **Domain Analysis**: Comparative evaluation across multiple planning domains
 
-## 📊 Key Findings
+## Key Findings
 
 ### Heuristic Performance Ranking
 
 | Rank | Heuristic | Success Rate | Avg Time | Memory Usage | Plan Quality |
 |------|-----------|--------------|----------|--------------|--------------|
-| 🥇 1 | **DTG+Landmarks** | 100.0% | 4.89s | 144.7 MB | 14.1 actions |
-| 🥈 2 | **Inc_DTG+Landmarks** | 100.0% | 4.93s | 144.4 MB | 14.1 actions |
-| 🥉 3 | **DTG** | 100.0% | 11.88s | 166.3 MB | 11.8 actions |
+| 1 | **DTG+Landmarks** | 100.0% | 4.89s | 144.7 MB | 14.1 actions |
+| 2 | **Inc_DTG+Landmarks** | 100.0% | 4.93s | 144.4 MB | 14.1 actions |
+| 3 | **DTG** | 100.0% | 11.88s | 166.3 MB | 11.8 actions |
 | 4 | **MCS** | 61.5% | 382.6s | 597.4 MB | 7.5 actions |
 | 5 | **Centroids** | 46.2% | 55.9s | 197.0 MB | 6.7 actions |
 
-### 🌍 Domain-Specific Performance
+### Domain-Specific Performance
 
 - **Most Successful**: Driverlog, Elevators, Zenotravel (100% success for top heuristics)
 - **Most Challenging**: Openstacks (0% success across all heuristics)
 - **Complex Domains**: Depots (8 agents), Elevators (variable complexity)
 
-### 💡 Key Insights
+### Key Insights
 
 1. **DTG+Landmarks** provides the optimal balance of speed, memory efficiency, and success rate
 2. **Incremental DTG with landmarks** offers competitive performance with minimal overhead
 3. **DTG-based heuristics** consistently achieve 100% success rates across tested domains
 4. **MCS and Centroids** struggle with complex multi-agent coordination, showing lower success rates
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -69,7 +69,7 @@ python3 heuristic_comparison_analysis.py
 java -jar FMAP.jar -h 2 agent1 domain1.pddl problem1.pddl agent-list.txt
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 fmap-extensions/
@@ -92,7 +92,7 @@ fmap-extensions/
 └── FMAP.jar                   # Executable FMAP platform
 ```
 
-## 🔬 Experimental Analysis
+## Experimental Analysis
 
 ### Available Heuristics
 
@@ -121,7 +121,7 @@ fmap-extensions/
 - **Openstacks**: Manufacturing processes (2 agents)
 - **Depots**: Warehouse operations (8 agents)
 
-## 📈 Generated Visualizations
+## Generated Visualizations
 
 ### Available Plots
 
@@ -138,7 +138,7 @@ fmap-extensions/
 3. **`detailed_analysis_report.md`**: Comprehensive analysis report
 4. **`statistical_summary.txt`**: Statistical analysis summary
 
-## 🛠️ Tools and Scripts
+## Tools and Scripts
 
 ### Analysis Tools
 
@@ -160,7 +160,7 @@ python3 heuristic_comparison_analysis.py --plots-dir results/plots
 python3 generate_detailed_summary.py
 ```
 
-## 📊 Results Summary
+## Results Summary
 
 ### Statistical Overview
 
@@ -178,7 +178,7 @@ python3 generate_detailed_summary.py
 4. **MCS** shows better success rate (61.5%) than Centroids (46.2%) but with high execution times
 5. **Centroids** require significant optimization for practical multi-agent applications
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 ### System Requirements
 
@@ -207,7 +207,7 @@ python3 generate_detailed_summary.py
    java -jar FMAP.jar --help
    ```
 
-## 🎓 Research Applications
+## Research Applications
 
 This analysis framework is suitable for:
 
@@ -217,7 +217,7 @@ This analysis framework is suitable for:
 - **Comparative Research**: Systematic heuristic comparison methodology
 - **Educational Use**: Teaching multi-agent planning concepts
 
-## 📖 Documentation
+## Documentation
 
 ### Core Documentation
 
@@ -231,7 +231,7 @@ This analysis framework is suitable for:
 - Multi-Agent Planning Competition (CoDMAP) benchmarks
 - DTG and Landmark heuristic literature
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Areas for enhancement:
 
@@ -240,11 +240,11 @@ Contributions welcome! Areas for enhancement:
 - **Analysis Tools**: Enhance visualization and statistical analysis
 - **Performance**: Optimize experimental framework efficiency
 
-## 📄 License
+## License
 
 This project extends the original FMAP platform. See `LICENSE.md` for details.
 
-## 🔗 Links
+## Links
 
 - **Original FMAP**: [Bitbucket Repository](https://bitbucket.org/altorler/fmap/)
 - **CoDMAP Competition**: [Official Website](http://agents.fel.cvut.cz/codmap/)

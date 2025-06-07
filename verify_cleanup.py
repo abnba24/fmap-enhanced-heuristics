@@ -11,16 +11,16 @@ from pathlib import Path
 
 def check_heuristic_naming():
     """Check that incorrect heuristic names have been removed"""
-    print("🔍 Checking heuristic naming consistency...")
-    
+    print("Checking heuristic naming consistency...")
+
     incorrect_names = ["DTG_Only", "Inc_DTG_Only", "FF_Heuristic"]
     python_files = glob.glob("**/*.py", recursive=True)
-    
+
     issues_found = []
     for file_path in python_files:
         if ".git" in file_path or file_path == "verify_cleanup.py":
             continue
-            
+
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
@@ -29,14 +29,14 @@ def check_heuristic_naming():
                         issues_found.append(f"{file_path}: contains '{incorrect_name}'")
         except Exception as e:
             print(f"Warning: Could not read {file_path}: {e}")
-    
+
     if issues_found:
-        print("❌ Issues found with heuristic naming:")
+        print("Issues found with heuristic naming:")
         for issue in issues_found:
             print(f"  - {issue}")
         return False
     else:
-        print("✅ All heuristic names are correct")
+        print("All heuristic names are correct")
         return True
 
 def check_correct_heuristic_mapping():
@@ -189,9 +189,9 @@ def check_jar_files():
 
 def main():
     """Run all verification checks"""
-    print("🧹 FMAP Codebase Cleanup Verification")
+    print("FMAP Codebase Cleanup Verification")
     print("=" * 50)
-    
+
     checks = [
         check_heuristic_naming,
         check_correct_heuristic_mapping,
@@ -199,25 +199,25 @@ def main():
         check_requirements_structure,
         check_jar_files
     ]
-    
+
     results = []
     for check in checks:
         results.append(check())
-    
+
     print("\n" + "=" * 50)
-    print("📊 VERIFICATION SUMMARY")
+    print("VERIFICATION SUMMARY")
     print("=" * 50)
-    
+
     passed = sum(results)
     total = len(results)
-    
+
     if passed == total:
-        print(f"🎉 ALL CHECKS PASSED ({passed}/{total})")
-        print("✅ Codebase cleanup was successful!")
+        print(f"ALL CHECKS PASSED ({passed}/{total})")
+        print("Codebase cleanup was successful!")
         return 0
     else:
-        print(f"❌ SOME CHECKS FAILED ({passed}/{total})")
-        print("🔧 Please review and fix the issues above")
+        print(f"SOME CHECKS FAILED ({passed}/{total})")
+        print("Please review and fix the issues above")
         return 1
 
 if __name__ == "__main__":
