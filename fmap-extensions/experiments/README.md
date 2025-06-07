@@ -74,8 +74,8 @@ Options:
 | 1  | DTG | Domain Transition Graph (baseline) |
 | 2  | DTG+Landmarks | DTG with landmarks |
 | 3  | Inc_DTG+Landmarks | Incremental DTG with landmarks |
-| 4  | **Centroids** | **Minimizes mean cost to goals** |
-| 5  | **MCS** | **Minimizes max cost to goals** |
+| 4  | **Centroids** | **Minimises mean cost to goals** |
+| 5  | **MCS** | **Minimises max cost to goals** |
 
 ## Output Structure
 
@@ -107,7 +107,7 @@ plots/
 - **Statistical significance** using Wilcoxon signed-rank tests
 - **Effect sizes** to measure practical importance
 
-### Key Visualizations
+### Key Visualisations
 
 1. **Coverage Comparison**: Which heuristics solve more problems?
 2. **Performance Boxes**: Distribution of time, memory, search effort
@@ -133,12 +133,12 @@ Based on the literature, you should expect:
 ### Centroids Heuristic
 - **Better coverage** on loosely-coupled domains (logistics, satellite)
 - **Moderate speedup** vs DTG baseline (~1.2-2x)
-- **Good plan quality** (minimizes expected cost to goals)
+- **Good plan quality** (minimises expected cost to goals)
 - **Higher coordination overhead** in distributed settings
 
-### MCS Heuristic  
+### MCS Heuristic
 - **Robust performance** across different coupling levels
-- **Conservative planning** (minimizes worst-case scenarios)
+- **Conservative planning** (minimises worst-case scenarios)
 - **Slightly higher search effort** but better worst-case guarantees
 - **Good scalability** with number of agents
 

@@ -237,8 +237,8 @@ Contributions welcome! Areas for enhancement:
 
 - **New Heuristics**: Implement additional heuristic functions
 - **Domains**: Add new planning domains for evaluation
-- **Analysis Tools**: Enhance visualization and statistical analysis
-- **Performance**: Optimize experimental framework efficiency
+- **Analysis Tools**: Enhance visualisation and statistical analysis
+- **Performance**: Optimise experimental framework efficiency
 
 ## License
 

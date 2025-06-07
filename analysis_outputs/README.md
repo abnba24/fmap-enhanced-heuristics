@@ -21,9 +21,9 @@ This directory contains all experimental results, plots, and analysis outputs fr
 
 ## Key Files
 
-### Visualizations (in results/plots/)
+### Visualisations (in results/plots/)
 - `heuristic_comparison_analysis.png` - Main heuristic comparison
-- `performance_matrices.png` - Performance matrix visualization
+- `performance_matrices.png` - Performance matrix visualisation
 - `scalability_analysis.png` - Scalability analysis
 - `heuristic_performance_by_agent_count.png` - Performance vs agent count
 - `heuristic_performance_by_domain.png` - Performance by planning domain
@@ -39,8 +39,8 @@ This directory contains all experimental results, plots, and analysis outputs fr
 1. **FF** - Fast-Forward heuristic
 2. **DTG** - Domain Transition Graph heuristic
 3. **DTG + Landmarks** - DTG with landmarks
-4. **Centroids** - Our implementation (minimizes mean cost to goals)
-5. **MCS** - Minimum Covering States (minimizes max cost to goals)
+4. **Centroids** - Our implementation (minimises mean cost to goals)
+5. **MCS** - Minimum Covering States (minimises max cost to goals)
 
 ## Domains Tested
 

@@ -23,9 +23,9 @@ Experiment runners and test scripts:
 - Additional experiment data and configurations
 
 ### `/analysis/`
-Analysis and visualization tools:
+Analysis and visualisation tools:
 - `regenerate_plots_improved.py` - Enhanced plot generation
-- `plot_comprehensive_results.py` - Comprehensive results visualization
+- `plot_comprehensive_results.py` - Comprehensive results visualisation
 
 ### `/documentation/`
 Technical documentation and guides:
@@ -74,7 +74,7 @@ PDDL domain and problem files for testing:
 
 1. **Running Experiments**: Use scripts in `/experiments/` directory
 2. **Automation**: Leverage tools in `/automation/` for batch processing
-3. **Analysis**: Generate visualizations using `/analysis/` tools
+3. **Analysis**: Generate visualisations using `/analysis/` tools
 4. **Documentation**: Refer to `/documentation/` for detailed guides
 
 ## Integration with Original FMAP
