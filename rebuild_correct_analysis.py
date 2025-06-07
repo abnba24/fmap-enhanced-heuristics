@@ -40,25 +40,25 @@ class CorrectAnalysisBuilder:
         
     def load_and_process_data(self):
         """Load raw JSON data and process with correct heuristic mapping"""
-        print("📊 Loading and processing raw experiment data...")
-        
+        print("Loading and processing raw experiment data...")
+
         result_files = list(self.results_dir.glob("result_*.json"))
         print(f"Found {len(result_files)} result files")
-        
+
         results = []
         for file_path in result_files:
             try:
                 with open(file_path, 'r') as f:
                     data = json.load(f)
-                
+
                 config = data.get('config', {})
                 search = data.get('search', {})
                 plan = data.get('plan', {})
-                
+
                 # Use correct heuristic mapping
                 heuristic_id = config.get('heuristic')
                 heuristic_name = self.correct_heuristic_names.get(heuristic_id, f"H{heuristic_id}")
-                
+
                 result = {
                     'filename': file_path.stem,
                     'domain': config.get('domain'),
@@ -67,7 +67,7 @@ class CorrectAnalysisBuilder:
                     'heuristic_name': heuristic_name,
                     'agent_count': len(config.get('agents', [])),
                     'agents': config.get('agents', []),
-                    
+
                     # Search performance
                     'coverage': search.get('coverage', False),
                     'success': search.get('coverage', False),
@@ -75,22 +75,22 @@ class CorrectAnalysisBuilder:
                     'cpu_time': search.get('cpu_time'),
                     'peak_memory_mb': search.get('peak_memory_mb'),
                     'search_nodes': search.get('search_nodes'),
-                    
+
                     # Plan quality
                     'plan_found': plan.get('plan_found', False),
                     'plan_length': plan.get('plan_length'),
                     'makespan': plan.get('makespan'),
-                    
+
                     # Error information
                     'error_message': data.get('error_message'),
                     'has_error': data.get('error_message') is not None
                 }
-                
+
                 results.append(result)
-                
+
             except Exception as e:
                 print(f"Error loading {file_path}: {e}")
-        
+
         df = pd.DataFrame(results)
         print(f"Loaded {len(df)} experiments with correct heuristic names")
         
@@ -115,30 +115,30 @@ class CorrectAnalysisBuilder:
     
     def generate_corrected_csv_files(self, df):
         """Generate corrected CSV files with proper heuristic names"""
-        print("📋 Generating corrected CSV files...")
-        
+        print("Generating corrected CSV files...")
+
         # 1. Heuristic Summary
         self._generate_heuristic_summary(df)
-        
+
         # 2. Comprehensive Metrics Comparison
         self._generate_comprehensive_metrics(df)
-        
+
         # 3. Domain Analysis
         self._generate_domain_analysis(df)
-        
+
         # 4. Performance Summary Table
         self._generate_performance_summary(df)
-        
+
         # 5. Timing Analysis Table
         self._generate_timing_analysis(df)
-        
+
         # 6. Efficiency Analysis Table
         self._generate_efficiency_analysis(df)
-        
+
         # 7. Quality Analysis Table
         self._generate_quality_analysis(df)
-        
-        print("✅ All corrected CSV files generated")
+
+        print("All corrected CSV files generated")
     
     def _generate_heuristic_summary(self, df):
         """Generate heuristic summary table"""
@@ -630,7 +630,7 @@ class CorrectAnalysisBuilder:
 
     def run_complete_rebuild(self):
         """Run the complete rebuild process"""
-        print("🚀 Starting complete analysis rebuild with correct heuristic names...")
+        print("Starting complete analysis rebuild with correct heuristic names...")
         print("=" * 70)
 
         # Step 1: Load and process raw data
@@ -643,13 +643,13 @@ class CorrectAnalysisBuilder:
         self.create_beautiful_tables()
 
         print("\n" + "=" * 70)
-        print("✅ COMPLETE! Analysis rebuilt successfully with correct heuristic names:")
-        print(f"  📊 Generated corrected CSV files")
-        print(f"  🎨 Created beautiful HTML and Markdown tables")
-        print(f"  📁 All files saved to: {self.plots_dir}")
+        print("COMPLETE! Analysis rebuilt successfully with correct heuristic names:")
+        print(f"  Generated corrected CSV files")
+        print(f"  Created beautiful HTML and Markdown tables")
+        print(f"  All files saved to: {self.plots_dir}")
 
         # Show summary of what was found
-        print(f"\n📈 Analysis Summary:")
+        print(f"\nAnalysis Summary:")
         print(f"  Total Experiments: {len(df)}")
         print(f"  Successful Experiments: {len(df[df['success'] == True])}")
         print(f"  Overall Success Rate: {df['success'].mean():.1%}")
@@ -657,7 +657,7 @@ class CorrectAnalysisBuilder:
         print(f"  Domains: {', '.join(sorted(df['domain'].unique()))}")
 
         # List generated files
-        print(f"\n📁 Generated Files:")
+        print(f"\nGenerated Files:")
         for file_type, pattern in [("Corrected CSV", "*_corrected.csv"), ("Beautiful HTML", "*_beautiful.html"), ("Beautiful Markdown", "*_beautiful.md")]:
             files = list(self.plots_dir.glob(pattern))
             if files:
