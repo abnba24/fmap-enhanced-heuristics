@@ -115,3 +115,6 @@ targeted_experiment_results.json
 !FMAP.jar
 !FMAP_final.jar
 !FMAP_original.jar
+
+# Maintenance scripts (less visible)
+.maintenance/
